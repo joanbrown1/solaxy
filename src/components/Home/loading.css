@@ -1,0 +1,25 @@
+
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url(../assets/navbg.svg);
+  }
+  
+  .logo {
+    font-size: 2rem;
+    transform: scale(0);
+    animation: zoomIn 2s ease-in-out forwards;
+  }
+  
+  @keyframes zoomIn {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
