@@ -16,7 +16,7 @@ const Profile = () => {
 
   return (
     <>
-     <div className="sm:block hidden bg-[#F3F3F3] mt-20 ml-[-830px] w-full h-full">
+     <div className="sm:block hidden bg-[#F3F3F3] mt-20 ml-[-800px] w-full h-full">
         <div className='mt-6 ml-6'>
             <p className='text-lg font-medium mb-4 ml-[330px]'>Profile</p>
             {/* <img src={homeph}/> */}
@@ -35,7 +35,7 @@ const Profile = () => {
             </div>
         </div>
      </div>
-     <div className="lg:hidden bg-[#F3F3F3] mt-20 w-full h-full ml-[-360px] mb-10 pl-[60px]">
+     <div className="lg:hidden bg-[#F3F3F3] mt-20 w-full h-full ml-[-280px] mb-10 pl-[60px]">
             <div className="mx-auto grid max-w-2xl grid-cols-2 gap-x-8 gap-y-6 lg:mx-0 lg:max-w-none lg:grid-cols-2 mt-6">
                 <img  src={profileph} className=''/>
                 <img src={editp} className=' mt-8'/>

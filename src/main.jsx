@@ -1,3 +1,8 @@
+// Add a minimal global object
+const globalObject = typeof global !== 'undefined' ? global : window || {};
+
+globalObject.global = globalObject.global || {};
+
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom';

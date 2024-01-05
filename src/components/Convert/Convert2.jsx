@@ -14,7 +14,7 @@ const Convert2 = () => {
 
   return (
     <>
-     <div className="sm:block hidden bg-[#F3F3F3] mt-20 ml-[-830px] w-full h-full">
+     <div className="sm:block hidden bg-[#F3F3F3] mt-20 ml-[-800px] w-full h-full">
         <div className='mt-6 ml-6'>
             <p className='text-lg font-medium mb-4'>Convert</p>
             <img src={convertph}/>
@@ -26,7 +26,7 @@ const Convert2 = () => {
             </div>
         </div>
      </div>
-     <div className="lg:hidden bg-[#F3F3F3] mt-20 w-full h-full ml-[-360px] mb-10">
+     <div className="lg:hidden bg-[#F3F3F3] mt-20 w-full h-full ml-[-280px] mb-10">
         <div className='mt-6 ml-6'>
             <div className='flex justify-center items-center ml-24'>
             <div className='ml-[-110px] mt-6'>

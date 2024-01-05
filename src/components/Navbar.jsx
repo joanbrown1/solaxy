@@ -10,13 +10,13 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center">
         <div className='hidden lg:flex'>
                 <img src={notification}/>
-                <img src={search} className='ml-[22px]'/>
-                <p className='ml-[92px] mt-2'>Hello, Christwin</p>
+                {/* <img src={search} className='ml-[22px]'/> */}
+                <p className='ml-[700px] mt-2'>Hello,  </p>
                 <img src={defaultprofile} className='ml-[20px]'/>
         </div>
-        <div className="lg:hidden flex">
+        <div className="lg:hidden flex md:hidden ">
             <img src={defaultprofile} className='ml-[23.5px]'/>
-            <p className='font-medium text-lg ml-6'>Hello, Christwin</p>
+            <p className='font-medium text-lg ml-6'>Hello,  </p>
             <img src={notification} className='ml-20'/>
         </div>
         {/* <div className="text-black text-2xl font-bold">Your Logo</div>

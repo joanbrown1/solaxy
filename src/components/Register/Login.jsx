@@ -1,8 +1,6 @@
 import React from 'react'
-import signup from "../../assets/signup.svg"
-import sign from "../../assets/login2.svg"
-import login from "../../assets/loginnnn.svg"
 import { useNavigate } from 'react-router-dom'
+import LoginForm from './LoginForm'
 
 const Login = () => {
 
@@ -10,17 +8,22 @@ const Login = () => {
 
   return (
     <>
-    <div className="sm:block hidden bg-[#F3F3F3] mt-20 ml-[-830px] w-full h-full">
+    <div className="sm:block hidden bg-[#F3F3F3] mt-20 ml-[-800px] w-full h-screen">
         <div>
-            <img src={login} className='ml-[350px] mt-20'/>
-            <img src={sign} className='mt-6 ml-[350px]' onClick={() => {navigate("/welcome")}}/>
+            <p className='mt-20 font-bold text-2xl text-center'>Welcome back</p>
+            <p className='mt-2 text-sm text-center'>Hey you're back, fill in your details to get back in</p>
+            <div className='mt-6'>
+                <LoginForm />
+            </div>
         </div>
     </div>
-    <div className="lg:hidden bg-[#F3F3F3] mt-20 w-full h-full ml-[-360px] mb-10">
-        <div>
-            <img src={login} className='ml-6 mt-20'/>
-            
-            <img src={sign} className='mt-6 ml-6' onClick={() => {navigate("/welcome")}}/>
+    <div className="lg:hidden bg-[#F3F3F3] mt-20 w-screen h-screen ml-[-280px] md:ml-48 md:mt-0 mb-10 ">
+        <div className='pl-4'>
+            <p className='ml-8 md:ml-48 mt-20 font-bold text-2xl'>Welcome back</p>
+            <p className='ml-8 md:ml-48 mt-2 text-sm '>Hey you're back, fill in your details to get back in</p>
+            <div className='mt-6'>
+                <LoginForm />
+            </div>
         </div>
     </div>
     

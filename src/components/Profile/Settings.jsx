@@ -18,7 +18,7 @@ const Settings = () => {
 
   return (
     <>
-     <div className="sm:block hidden bg-[#F3F3F3] mt-20 ml-[-830px] w-full h-full pb-20">
+     <div className="sm:block hidden bg-[#F3F3F3] mt-20 ml-[-800px] w-full h-full pb-20">
         <div className='mt-6 ml-6'>
             <p className='text-lg font-medium mb-4 ml-[330px]'>Profile</p>
             {/* <img src={homeph}/> */}
@@ -28,7 +28,7 @@ const Settings = () => {
             <div className='flex justify-center items-center'>
                 <div className='mt-10 ml-[-40px]'>
                     <img src={wallet} className='w-[420px] ' onClick={() => {navigate("/wallet")}}/>
-                    <img src={currency} className='w-[420px] ' onClick={() => {navigate("/convert")}}/>
+                    <img src={currency} className='w-[420px] ' onClick={() => {navigate("/transactions")}}/>
                     <img src={security} className='w-[420px] ' onClick={() => {navigate("/")}}/>
                     <img src={pushnot} className='w-[420px] ' onClick={() => {navigate("/")}}/>
                     <img src={support} className='w-[420px] ' onClick={() => {navigate("/")}}/>
@@ -41,7 +41,7 @@ const Settings = () => {
             </div>
         </div>
      </div>
-     <div className="lg:hidden bg-[#F3F3F3] mt-20 w-full h-full ml-[-360px] pb-20 pl-[60px]">
+     <div className="lg:hidden bg-[#F3F3F3] mt-20 w-full h-full ml-[-280px] pb-20 pl-[60px]">
             <div className="mx-auto grid max-w-2xl grid-cols-2 gap-x-8 gap-y-6 lg:mx-0 lg:max-w-none lg:grid-cols-2 mt-6">
                 <img  src={settingpr} className=''/>
             </div>
@@ -49,7 +49,7 @@ const Settings = () => {
             <div className='flex justify-center items-center'>
                 <div className='mt-10 ml-[-40px]'>
                     <img src={wallet} className='' onClick={() => {navigate("/wallet")}}/>
-                    <img src={currency} className='' onClick={() => {navigate("/convert")}}/>
+                    <img src={currency} className='' onClick={() => {navigate("/transactions")}}/>
                     <img src={security} className='' onClick={() => {navigate("/")}}/>
                     <img src={pushnot} className='' onClick={() => {navigate("/")}}/>
                     <img src={support} className='' onClick={() => {navigate("/")}}/>

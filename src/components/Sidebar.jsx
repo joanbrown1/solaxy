@@ -7,17 +7,22 @@ import wallet from "../assets/walletmoney.svg"
 import convert from "../assets/convert.svg"
 import profile from "../assets/profile.svg"
 import setting from "../assets/setting.svg"
-import logout from "../assets/logout.svg"
+import logoutt from "../assets/logout.svg"
 import day from "../assets/day.svg"
+import { useNavigate } from 'react-router-dom'
+
 
 const Sidebar = () => {
+  
+  let navigate = useNavigate();
   const location = useLocation();
 
+  
   return (
-    <nav className=" text-black w-sidebar fixed top-0 p-4 pl-[37.46px] sm:block hidden">
+    <nav className=" text-black w-sidebar fixed top-0 p-4 pl-[37.46px] sm:block hidden bg-white h-screen">
       <div className="text-2xl font-poppins font-normal mb-4 flex mt-[15px] ">
         <img src={logo} alt="" className="w-[28.24px] h-[32px] mr-4"/>
-        Solaxy
+        Solpay
       </div>
       <ul className="font-medium text-base mt-[25px]">
         <li>
@@ -39,10 +44,10 @@ const Sidebar = () => {
             }`}
           >
            {location.pathname === "/wallet" ?  <img src={whitehome} className="mr-4"/> :  <img src={wallet} className="mr-4"/>}
-            Wallet
+            Buy Power
           </NavLink>
         </li>
-        <li>
+        {/* <li>
           <NavLink
             to="/convert"
             className={`p-2 mb-2 hover:bg-secondary hover:text-primary rounded-lg transition-all flex ${
@@ -52,7 +57,7 @@ const Sidebar = () => {
            {location.pathname === "/convert" ?  <img src={whitehome} className="mr-4"/> :  <img src={convert} className="mr-4"/>}
             Convert
           </NavLink>
-        </li>
+        </li> */}
         <li>
           <NavLink
             to="/profile"
@@ -66,6 +71,17 @@ const Sidebar = () => {
         </li>
         <li>
           <NavLink
+            to="/transactions"
+            className={`p-2 mb-2 hover:bg-secondary hover:text-primary rounded-lg transition-all flex ${
+              location.pathname === "/transactions" ? "bg-secondary text-white" : ""
+            }`}
+          >
+           {location.pathname === "/transactions" ?  <img src={whitehome} className="mr-4"/> :  <img src={convert} className="mr-4"/>}
+            Transactions
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
             to="/settings"
             className={`p-2 mb-2 hover:bg-secondary hover:text-primary rounded-lg transition-all flex ${
               location.pathname === "/settings" ? "bg-secondary text-white" : ""
@@ -75,6 +91,7 @@ const Sidebar = () => {
             Settings
           </NavLink>
         </li>
+       
         <li>
           <NavLink
             to="/login"
@@ -82,7 +99,7 @@ const Sidebar = () => {
               location.pathname === "/login" ? "bg-secondary text-white" : ""
             }`}
           >
-           {location.pathname === "/login" ?  <img src={whitehome} className="mr-4"/> :  <img src={logout} className="mr-4"/>}
+           {location.pathname === "/login" ?  <img src={whitehome} className="mr-4"/> :  <img src={logoutt} className="mr-4"/>}
             Logout
           </NavLink>
         </li>

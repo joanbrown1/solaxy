@@ -11,6 +11,10 @@ import SignUp from '../components/Register/SignUp';
 import Login from '../components/Register/Login';
 import Welcom from '../components/Register/Welcom';
 import Popup from '../components/Home/Popup';
+import Pay from '../components/pay/Pay';
+import Dai from '../components/pay/Dai';
+import Transactions from '../components/Home/Transactions';
+import DaiPayment from '../components/pay/DaiPayment';
 
 const Router = () => {
   return (
@@ -28,6 +32,10 @@ const Router = () => {
              <Route path="/login" element={<Login />} />
              <Route path="/welcome" element={<Welcom />} />
              <Route path="/solaxy" element={<Popup />} />
+             <Route path="/pay" element={<Pay />} />
+             <Route path="/dai" element={<Dai />} />
+             <Route path="/transactions" element={<Transactions />} />
+             <Route path="/daipayment" element={<DaiPayment />} />
         </Routes>
     </>
   )

@@ -1,0 +1,15 @@
+.newbg {
+    background-image: url('../../assets/newbg.png');
+    background-repeat: no-repeat, repeat;
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+.mobg {
+    background-image: url('../../assets/mobg.png');
+    background-repeat: no-repeat, repeat;
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+}

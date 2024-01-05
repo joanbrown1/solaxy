@@ -11,7 +11,7 @@ const Footer = () => {
 
   return (
     <>
-        <nav className="bg-primary p-4 lg:hidden bottom-0 shadow-2xl fixed w-full">
+        <nav className="bg-primary p-4 lg:hidden bottom-0 shadow-2xl fixed w-full md:hidden">
             <div className='flex justify-center items-center space-x-10'>
                 <NavLink
                 to="/home"
@@ -29,14 +29,14 @@ const Footer = () => {
                 >
                     {location.pathname === "/wallet" ?  <img src={whitehome} /> :  <img src={wallet} />}
                 </NavLink>
-                <NavLink
+                {/* <NavLink
                 to="/convert"
                 className={`p-2 mb-2 hover:bg-secondary hover:text-primary rounded-full transition-all flex ${
                 location.pathname === "/convert" ? "bg-secondary text-white" : ""
                 }`}
                 >
                     {location.pathname === "/convert" ?  <img src={whitehome} /> :  <img src={convert} />}
-                </NavLink>
+                </NavLink> */}
                 <NavLink
                 to="/profile"
                 className={`p-2 mb-2 hover:bg-secondary hover:text-primary rounded-full transition-all flex ${

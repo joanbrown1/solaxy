@@ -15,7 +15,7 @@ import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../context/DataContext';
 
 
-const Home = () => {
+const Transactions = () => {
 
   const { userData } = useAuth();
  let navigate = useNavigate();
@@ -24,12 +24,14 @@ const Home = () => {
  const handleClick = () => {
     navigate("/power")
 }
+// console.log(userData)
+const id = userData._id
 
 const saveData = async () => {
 
   try {
    
-     let response = await fetch("https://apis.qubatorsunn.ng/solaxy/power_hist/"+userData._id, { 
+     let response = await fetch("https://apis.qubatorsunn.ng/solaxy/transactions/"+id, { 
        method: "GET"
      });
      
@@ -63,9 +65,9 @@ const formatDate = (inputDate) => {
     <>
        {userData && (
         <>
-        <div className="sm:block hidden bg-[#F3F3F3] mt-20 ml-[-800px] w-full h-full">
+        <div className="sm:block hidden bg-[#F3F3F3] mt-20 ml-[-800px] w-full h-screen">
         <div className='mt-6 ml-6'>
-            <p className='text-lg font-medium mb-4'>Home</p>
+            <p className='text-lg font-medium mb-4'>Transactions</p>
             <div className='newbg w-[989px] h-[175px] pl-[87.61px] pt-[49px]'>
               <div className='flex'><img src={eye} className='w-[16px]'/><p className='text-xs font-light text-white pl-2'>Power Balance</p></div>
               <p className='text-white text-4xl'>{userData.p_balance}kWh</p>
@@ -79,19 +81,12 @@ const formatDate = (inputDate) => {
                     <div className='rounded-lg w-[180px] h-[44px] text-center pt-2 ml-8 font-semibold flex'>
                         <img src={powerb}/>
                         <div>
-                        <p className='pl-1 text-sm'>Power Usage</p>
+                        <p className='pl-1 text-sm'>{(item.status).toUpperCase()}</p>
                         <p className='pl-1 text-xs font-thin'>{formatDate(item.date)}</p>
                         </div>
                     </div>
-                    <div className='bg-white rounded-lg w-[180px] h-[44px] text-center pt-2 text-green-300'>+{item.power_usage} kWh</div>
+                    <div className='bg-white rounded-lg w-[180px] h-[44px] text-center pt-2 text-gray-600'>{Math.ceil(item.amount)} {item.type}</div>
                   </div>))) : ""}
-                </div>
-                {/* <img  src={homeph1}/> */}
-                <div>
-                  <p className='text-xl font-bold pb-2'>Power Usage</p>
-                  <p className='text-sm pb-4'>Find your power consumption stats here</p>
-                  <img src={daily} className='w-[329px] pb-4'/>
-                  <img src={usage} className='w-[345px] ml-[-16px]'/>
                 </div>
             </div>
         </div>
@@ -102,7 +97,6 @@ const formatDate = (inputDate) => {
               <div className='flex'><img src={eye} className='w-[16px]'/><p className='text-xs font-light text-white pl-1'>Power Balance</p></div>
               <p className='text-white text-4xl'>{userData.p_balance}kWh</p>
             </div>
-            {/* <img src={homeframe2} className='ml-2'/> */}
             <img src={recent} className='my-4 ml-2'/>
             {power ? 
             (power.map((item, index) => (
@@ -110,18 +104,12 @@ const formatDate = (inputDate) => {
                 <div className='rounded-lg w-[131px] h-[32px] text-center pt-1 ml-8 font-semibold flex'>
                     <img src={powerb}/>
                     <div>
-                    <p className='pl-1 text-sm'>Power Usage</p>
+                    <p className='pl-1 text-sm'>{(item.status).toUpperCase()}</p>
                     <p className='pl-1 text-xs font-thin'>{formatDate(item.date)}</p>
                     </div>
                 </div>
-                <div className='bg-white rounded-lg w-[131px] h-[32px] text-center pt-1 text-green-200' onClick={() => {handleClick()}}>+{item.power_usage} kWh</div>
+                <div className='bg-white rounded-lg w-[131px] h-[32px] text-center pt-1 text-gray-600' onClick={() => {handleClick()}}>{Math.ceil(item.amount)} {item.type}</div>
               </div>))) : ""}
-            {/* <img src={ph1} onClick={handleClick} />
-            <img src={ph2} onClick={handleClick}/>
-            <img src={ph1} onClick={handleClick}/>
-            <img src={ph2} onClick={handleClick}/>
-            <img src={ph1} onClick={handleClick}/>
-            <img src={ph2} onClick={handleClick}/> */}
         </div>
      </div>
         </>
@@ -131,4 +119,4 @@ const formatDate = (inputDate) => {
   )
 }
 
-export default Home
+export default Transactions
